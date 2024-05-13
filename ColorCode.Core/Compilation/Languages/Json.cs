@@ -13,7 +13,7 @@ namespace ColorCode.Compilation.Languages
     /// </summary>
     public class Json : ILanguage
     {
-        private const string Regex_String = @"""[^""\\]*(?:\\[^\r\n]|[^""\\]*)*""";
+        private const string Regex_String = @"""[^""\\]*(?:\\[^\r\n]|[^""\\\w]*)*""";
         private const string Regex_Number = @"-?(?:0|[1-9][0-9]*)(?:\.[0-9]*)?(?:[eE][-+]?[0-9]+)?";
 
         public string Id
